@@ -1,0 +1,146 @@
+@layer font {
+    @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+}
+
+@layer global {
+    :root {
+        --off-white: #EBEAEA;
+        --white: #FFFFFF;
+        --green: #02A34B;
+        --gray: #A5A5A5;
+        --black: #000000;
+        --yellow: #FFC012;
+        --red: #FE1A1A;
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: "Coda", system-ui;
+    }
+
+    p,
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: var(--off-white);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 24px;
+    }
+}
+
+@layer main {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        gap: 10px
+    }
+
+    form input {
+        flex-grow: 1;
+        box-shadow: 0px 0px 8px #00000042;
+        border: none;
+        border-radius: 50px;
+        font-family: "Coda", system-ui;
+        outline: none;
+        padding-inline: 20px;
+    }
+
+    form input::placeholder {
+        font-family: "Coda", system-ui;
+        font-weight: 800;
+        color: #A5A5A5;
+        font-size: 12px;
+    }
+
+    form button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 8px #00000042;
+    }
+
+    h3 {
+        font-size: 19px;
+        color: #A5A5A5;
+        text-align: center;
+    }
+
+    .todo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .todo {
+        display: flex;
+        gap: 10px;
+        background-color: var(--white);
+        padding: 10px;
+        align-items: center;
+        border-radius: 100px;
+        box-shadow: 0px 0px 8px #00000042;
+        outline: none;
+    }
+
+    .todo button {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    .check {
+        width: 50px;
+        height: 50px;
+        background-color: var(--green);
+    }
+
+    .edit,
+    .delete {
+        width: 40px;
+        height: 40px;
+    }
+
+    .edit {
+        background-color: var(--yellow);
+    }
+
+    .delete {
+        background-color: var(--red);
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .todo input {
+        border: none;
+        background-color: transparent;
+        flex-grow: 1;
+        font-size: 15px;
+    }
+}
