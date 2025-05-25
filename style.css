@@ -1,6 +1,4 @@
-@layer font {
-    @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
 
 @layer global {
     :root {
@@ -15,7 +13,7 @@
 
     * {
         box-sizing: border-box;
-        font-family: "Coda", system-ui;
+        font-family: "poppins", system-ui;
     }
 
     p,
@@ -61,8 +59,8 @@
     }
 
     form input::placeholder {
-        font-family: "Coda", system-ui;
-        font-weight: 800;
+        font-family: "poppins", system-ui;
+        font-weight: 500;
         color: #A5A5A5;
         font-size: 12px;
     }
@@ -83,6 +81,7 @@
         font-size: 19px;
         color: #A5A5A5;
         text-align: center;
+        font-weight: 500;
     }
 
     .todo-container {
