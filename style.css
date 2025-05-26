@@ -32,6 +32,7 @@
         justify-content: center;
         padding-inline: 24px;
         overflow: hidden;
+        margin: 0;
     }
 }
 
@@ -152,5 +153,14 @@
     .todo.checked input {
         color: grey;
         text-decoration: line-through
+    }
+}
+
+@layer prince {
+    .prince {
+        width: 40px;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
     }
 }
