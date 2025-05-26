@@ -8,7 +8,9 @@
         --gray: #A5A5A5;
         --black: #000000;
         --yellow: #FFC012;
+        --yellow-light: #fbebbd;
         --red: #FE1A1A;
+        --red-light: #efadad;
     }
 
     * {
@@ -148,6 +150,14 @@
 
     .todo.checked .check {
         background-color: grey;
+    }
+
+    .todo.checked .edit {
+        background-color: var(--yellow-light);
+    }
+
+    .todo.checked .delete {
+        background-color: var(--red-light);
     }
 
     .todo.checked input {
