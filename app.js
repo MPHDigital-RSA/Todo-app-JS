@@ -35,7 +35,8 @@ function submitToDo(event){
     const todoInput = document.createElement("input");
     todoInput.setAttribute("value", `${value}`);
     todoInput.setAttribute("type", "text");
-    todoInput.setAttribute("disabled", "")
+    todoInput.disabled = true;
+    todoInput.classList.add("todo-display");
 
     // create the button container, the buttons and their images.
     const buttonContainer = document.createElement("div");
@@ -86,7 +87,10 @@ function submitToDo(event){
 
 // check todo fn
 const checkToDo = () => {
-    alert("check button pressed")
+    // alert("check button pressed")
+
+    // when you press the check button the class of checked will be added to the todo element.
+    document.querySelector(".todo").classList.add("checked")
 }
 
 // Delete todo fn
@@ -95,5 +99,10 @@ const deleteToDo = () => {
 }
 // Edit todo fn
 const editToDo = () => {
-    alert("todo editted")
+    
+    // changing the disabled to false when the edit button is pressed.
+    document.querySelector(".todo-display").disabled = false;
+
+    // changing the diabled to true when the button is pressed again.
+
 }
