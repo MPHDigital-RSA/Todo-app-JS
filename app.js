@@ -61,7 +61,16 @@ function submitToDo(e){
         // >> create the edit button
         const editToDoBtn = document.createElement("button");
         editToDoBtn.classList.add("edit")
-        editToDoBtn.addEventListener("click", editToDo)
+        editToDoBtn.addEventListener("click", (e) => {
+            
+            // preventing the page refresh
+            e.preventDefault();
+
+            // changing the disabled to false when the edit button is pressed.
+            document.querySelector(".todo-display").disabled = false;
+
+            // changing the diabled to true when the button is pressed again.
+        })
         
         const editImg = document.createElement("img");
         editImg.setAttribute("src", "images/edit.svg");
@@ -72,9 +81,9 @@ function submitToDo(e){
         // >> create the delete button
         const deleteToDoBtn = document.createElement("button");
         deleteToDoBtn.classList.add("delete");
-        deleteToDoBtn.addEventListener("click", (event) => {
-
-            const id = event.target.parentElement.parentElement.parentElement.id;
+        deleteToDoBtn.addEventListener("click", (eve) => {
+            eve.preventDefault();
+            const id = eve.target.parentElement.parentElement.parentElement.id;
 
             if(`id${idIndex} === id`){
                 event.target.parentElement.parentElement.parentElement.remove();
@@ -107,23 +116,4 @@ function submitToDo(e){
         alert("input empty, write your")
     }
     
-}
-
-// check todo fn
-// const checkToDo = () => {
-//     document.querySelector(".todo").classList.add("checked")
-// }
-
-// Delete todo fn
-// const deleteToDo = (event, id) => {
-//     // alert("todo deleted")
-// }
-// Edits todo fn
-const editToDo = () => {
-    
-    // changing the disabled to false when the edit button is pressed.
-    document.querySelector(".todo-display").disabled = false;
-
-    // changing the diabled to true when the button is pressed again.
-
 }
