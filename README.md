@@ -11,3 +11,11 @@ for every button pressed i track that element
 const parentContainer = event.target.parentElement.parentElement;
 
 after finding the parent id i compare to the current id, if they match i then take action.
+
+
+# Local storage
+
+how to implement local storage?
+localStorage.setItem("key", "value")
+
+how to add and retreive todos for the local storage?

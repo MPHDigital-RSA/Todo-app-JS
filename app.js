@@ -5,6 +5,9 @@ const toDoContainer = document.querySelector(".todo-container")
 
 let idIndex = 0;
 
+// add an empty array on local storage
+// localStorage.setItem("todos", []);
+
 // event listners
 submitBtn.addEventListener("click", submitToDo);
 
@@ -14,11 +17,16 @@ function submitToDo(e){
     e.preventDefault();
     const value = inputEl.value;
 
+    
     if (value){
         // created a todo element and added a class "todo".
         const todo = document.createElement("div");
         todo.classList.add("todo");
         todo.setAttribute("id", `id${idIndex}`)
+
+        // add the value to local storage
+        localStorage.setItem(`id${idIndex}`, value);
+
 
         // create a button and add the class "check"
         const checkBtn = document.createElement("button");
@@ -86,7 +94,9 @@ function submitToDo(e){
             const id = eve.target.parentElement.parentElement.parentElement.id;
 
             if(`id${idIndex} === id`){
-                event.target.parentElement.parentElement.parentElement.remove();
+                eve.target.parentElement.parentElement.parentElement.remove();
+                // remove item from local storage
+                localStorage.removeItem(id)
             }
         })
         
@@ -107,8 +117,7 @@ function submitToDo(e){
 
         // append the todo element into the todo container.
         toDoContainer.appendChild(todo)
-        // console.log(todo);
-
+                  
         // reset the input value of the input element
         inputEl.value = "";
         idIndex++;
