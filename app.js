@@ -116,7 +116,6 @@ function checkToDo(e) {
     }
 }
 
-
 // DELETE TODO FN
 
 //find the todo ID and compare to the current idIndex and if they match remove the target todo and remove the corresponding todo on localhost
