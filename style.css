@@ -28,12 +28,13 @@
 
     body {
         background-color: var(--off-white);
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-inline: 24px;
-        overflow: hidden;
+        padding-block: 100px;
+        /* overflow: hidden; */
         margin: 0;
     }
 }
